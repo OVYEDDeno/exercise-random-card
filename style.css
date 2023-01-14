@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+  }
+  div {
+    background: white;
+    width: 200px;
+    border-style: dashed;
+    border-radius: 15px;
+    border-width: 2px;
+    height: 300px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 50px;      
+    }

@@ -1,0 +1,1 @@
+document.getElementById("topSuit").innerHTML = Math.random();
