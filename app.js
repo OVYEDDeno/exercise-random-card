@@ -1,15 +1,28 @@
-const myFunction = () => {
-    let pronoun = ["the", "our"];
-    let adj = ["great", "big"];
-    let noun = ["jogger", "racoon"];
-    let tld = [".com", ".net"];
-    let randomPronoun = pronoun[Math.floor(Math.random() * pronoun.length)];
-    let randomAdj = adj[Math.floor(Math.random() * adj.length)];
-    let randomNoun = noun[Math.floor(Math.random() * noun.length)];
-    let randomTld = tld[Math.floor(Math.random() * tld.length)];
-    return randomPronoun + randomAdj + randomNoun + randomTld;
-  };
-  document.getElementById("domain").innerHTML = myFunction();
-  //keywords -variable names- assignment operator(=) -Arrays-
-  
-document.getElementById("topSuit").innerHTML = Math.random();
+let btn=document.querySelector("#button")
+let topSuit=document.querySelector(".topSuit")
+let bottomSuit=document.querySelector(".bottomSuit")
+let value=document.querySelector("#value")
+btn.addEventListener("click",function(){
+changeCard()
+})
+function changeCard(){
+  let SuitList=["♦", "♥", "♠", "♣"]
+let ValueList=["A","2","3","4","5","6","7","8","9","10","J","Q","K",]
+let RandomSuit=SuitList[Math.floor(Math.random()*SuitList.length)]
+let RandomValue=ValueList[Math.floor(Math.random()*ValueList.length)]
+if(RandomSuit=="♦"||RandomSuit=="♥"){
+  topSuit.style.color="red"
+  bottomSuit.style.color="red"
+  value.style.color="red"
+}else{
+  topSuit.style.color="black"
+  bottomSuit.style.color="black"
+  value.style.color="black"
+}
+topSuit.innerHTML=RandomSuit
+bottomSuit.innerHTML=RandomSuit
+value.innerHTML=RandomValue
+}
+window.onload=function(){
+  changeCard()
+}

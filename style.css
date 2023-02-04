@@ -1,14 +1,28 @@
 body {
     background-color: black;
   }
-  div {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: white;
     width: 200px;
     border-style: dashed;
     border-radius: 15px;
     border-width: 2px;
     height: 300px;
-    margin-left: 40%;
-    margin-right: 40%;
-    margin-bottom: 50px;      
+    margin: auto;
+    }
+    .Suit{
+      font-size: 50px;
+      margin-left: 10px;
+
+    }
+    #value{
+      font-size: 50px;
+      text-align: center;
+    }
+    .bottomSuit{
+      text-align: end;
+      margin-right: 10px;
     }
